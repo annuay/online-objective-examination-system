@@ -1,0 +1,69 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Create Exam
+    // CSS
+    link(rel='stylesheet', href='/stylesheets/assets/bootstrap/css/font.css')
+    link(rel='stylesheet', href='/stylesheets/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/assets/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/assets/css/form-elements.css')
+    link(rel='stylesheet', href='/stylesheets/assets/css/style.css')
+  body
+    // Top content
+    .top-content
+      .inner-bg
+        .container
+          .row
+            .col-sm-8.col-sm-offset-2.text
+              h1
+                strong Create Exam
+          .row
+            .col-sm-3
+              a.btn.btn-info(href='/faculties/home', role='button') Go Back!
+            .col-sm-6.form-box
+              .form-top
+                .form-top-left
+                  h3 Create Exam
+                  p Fill the form to create an exam:
+              .form-bottom
+                form.login-form(role='form', action='create', method='post')
+                  .form-group
+                    label.sr-only(for='form-exam_code') Exam Code
+                    input#form-exam_code.form-exam_code.form-control(type='text', name='exam_code', placeholder=exam.exam_code)
+                  .form-group
+                    label.sr-only(for='form-exam_name') Exam Name
+                    input#form-exam_name.form-exam_name.form-control(type='text', name='exam_name', placeholder=exam.exam_name)
+                  .form-group
+                    p Select No. of Hours
+                    label.sr-only(for='form-duration_hours') Duration Hours
+                    select(name='duration_hours')
+                      option(value='1') 1
+                      option(value='2') 2
+                      option(value='3') 3
+                  .form-group
+                    p Select No. of Minutes
+                    label.sr-only(for='form-duration_minutes') Duration Minutes
+
+                    select(name='duration_minutes')
+                      option(value='0') 0
+                      option(value='15') 15
+                      option(value='30') 30
+                      option(value='45') 45
+                  .form-group
+                    label.sr-only(for='form-course_code') Course Code
+                    input#form-course_code.form-course_code.form-control(type='text', name='course_code', placeholder=exam.course_code)
+                  button.btn(type='submit') Create
+            .col-sm-3
+              a.btn.btn-info(href='/faculties/logout', role='button') Logout!
+    // Javascript
+    script(src='/stylesheets/assets/js/jquery-1.11.1.min.js')
+    script(src='/stylesheets/assets/bootstrap/js/bootstrap.min.js')
+    script(src='/stylesheets/assets/js/jquery.backstretch.min.js')
+    script(src='/stylesheets/assets/js/scripts.js')
+    //if lt IE 10
+      script(src='assets/js/placeholder.js')
+
+    

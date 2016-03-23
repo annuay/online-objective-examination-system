@@ -1,0 +1,88 @@
+doctype html
+html(lang='en')
+  script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+  script(src='/javascripts/question_list.js')
+  script(type='text/javascript')| var exam_code =!{JSON.stringify(exam_code)};
+  script(src='/javascripts/question_list.js')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    Take Exam
+    // CSS
+    link(rel='stylesheet', href='/stylesheets/assets/bootstrap/css/font.css')
+    link(rel='stylesheet', href='/stylesheets/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/assets/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/assets/css/form-elements.css')
+    link(rel='stylesheet', href='/stylesheets/assets/css/style.css')
+  body
+    // Top content
+    .top-content
+      .inner-bg
+        .container
+          .row
+            .col-sm-8.col-sm-offset-2.text
+              h1
+                strong Exam Code:"#{exam_code}"
+                &nbsp &nbsp &nbsp &nbsp &nbsp 
+                h1#time
+          .row
+            .col-sm-8.form-box
+              .form-top
+                .form-top-left
+                  h3 Questions
+                  <br>
+              .form-bottom
+                p
+                  
+                  h4#number
+                  span#question
+                  br
+                  strong A:               
+                  span#optionA
+                  &nbsp &nbsp &nbsp &nbsp &nbsp
+
+                  strong B:                
+                  span#optionB(align='right')
+                  br
+
+                  strong C:             
+                  span#optionC
+                  &nbsp &nbsp &nbsp &nbsp &nbsp
+
+                  strong D:               
+                  span#optionD
+
+            .col-sm-4.form-box
+              .form-top
+                .form-top-left
+                  h3 Questions
+                  <br>
+              .form-bottom
+                form.form-response(role='takeexam', action='submit', method='post', id='formResponse')
+                  #questionList
+                    table
+                      thead
+                        th Question No.
+                        th Choice
+                      tbody
+                  br
+                  br
+                  .form-group
+                    label.sr-only(for='form-exam_code') exam_code
+                    input#form-exam_code.form-exam_code.form-control(type='hidden', name='exam_code', value=exam_code)
+                  br
+                  .form-group
+                    label.sr-only(for='form-username') username
+                    input#form-username.form-username.form-control(type='hidden', name='username', value=username)
+                  button.btn(type='submit') Submit
+
+
+                    
+    // Javascript
+    script(src='/stylesheets/assets/js/jquery-1.11.1.min.js')
+    script(src='/stylesheets/assets/bootstrap/js/bootstrap.min.js')
+    script(src='/stylesheets/assets/js/jquery.backstretch.min.js')
+    script(src='/stylesheets/assets/js/scripts.js')
+    //if lt IE 10
+      script(src='assets/js/placeholder.js')

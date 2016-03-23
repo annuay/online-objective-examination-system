@@ -1,0 +1,75 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Admin Home
+    // CSS
+    link(rel='stylesheet', href='/stylesheets/assets/bootstrap/css/font.css')
+    link(rel='stylesheet', href='/stylesheets/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/assets/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/assets/css/form-elements.css')
+    link(rel='stylesheet', href='/stylesheets/assets/css/style.css')
+  body
+    // Top content
+    .top-content
+      .inner-bg
+        .container
+          .row
+            .col-sm-8.col-sm-offset-2.text
+              h1
+                strong Hello Admin
+                &nbsp &nbsp &nbsp &nbsp &nbsp 
+                a.btn.btn-info(href='/admin/logout', role='button') Logout!
+          .row
+            .col-sm-4.form-box
+              .form-top
+                .form-top-left
+                  h3 Student
+                  <br>
+                .form-group
+                    a.btn.btn-info(href='/students/new', role='button') Add Student
+                .form-group
+                    a.btn.btn-info(href='/students/get_username_edit', role='button') Edit Student
+                .form-group
+                    a.btn.btn-info(href='/students/get_username_delete', role='button') Delete Student
+                .form-group
+                    a.btn.btn-info(href='/students/register_form', role='button') Register Student to a Course
+                .form-group
+                    a.btn.btn-info(href='/students/deregister_form', role='button') Deregister Student from a Course
+
+            .col-sm-4.form-box
+              .form-top
+                .form-top-left
+                  h3 Faculty
+                  <br>
+                .form-group
+                    a.btn.btn-info(href='/faculties/new', role='button') Add Faculty
+                .form-group
+                    a.btn.btn-info(href='/faculties/get_username_edit', role='button') Edit Faculty
+                .form-group
+                    a.btn.btn-info(href='/faculties/get_username_delete', role='button') Delete Faculty
+                .form-group
+                    a.btn.btn-info(href='/faculties/assign_form', role='button') Assign Course to a Faculty
+                .form-group
+                    a.btn.btn-info(href='/faculties/unassign_form', role='button') Unassign Course from a Faculty
+
+            .col-sm-4.form-box
+              .form-top
+                .form-top-left
+                  h3 Course
+                  <br>
+                .form-group
+                    a.btn.btn-info(href='/courses/new', role='button') Add Course
+                .form-group
+                    a.btn.btn-info(href='/courses/get_courseid_edit', role='button') Edit Course
+                .form-group
+                    a.btn.btn-info(href='/courses/get_courseid_delete', role='button') Delete Course
+    // Javascript
+    script(src='/stylesheets/assets/js/jquery-1.11.1.min.js')
+    script(src='/stylesheets/assets/bootstrap/js/bootstrap.min.js')
+    script(src='/stylesheets/assets/js/jquery.backstretch.min.js')
+    script(src='/stylesheets/assets/js/scripts.js')
+    //if lt IE 10
+      script(src='assets/js/placeholder.js')

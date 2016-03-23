@@ -1,0 +1,51 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Edit Faculty
+    // CSS
+    link(rel='stylesheet', href='/stylesheets/assets/bootstrap/css/font.css')
+    link(rel='stylesheet', href='/stylesheets/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/assets/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/assets/css/form-elements.css')
+    link(rel='stylesheet', href='/stylesheets/assets/css/style.css')
+  body
+    // Top content
+    .top-content
+      .inner-bg
+        .container
+          .row
+            .col-sm-8.col-sm-offset-2.text
+              h1
+                strong Edit Faculty
+          .row
+            .col-sm-3
+              a.btn.btn-info(href='/admin/home', role='button') Go Back!
+            .col-sm-6.form-box
+              .form-top
+                .form-top-left
+                  h3 Edit Faculty
+                  p Fill the form to edit the faculty details:
+              .form-bottom
+                form.login-form(role='form', action='update', method='post')
+                  .form-group
+                    label.sr-only(for='form-password') Name
+                    input#form-password.form-password.form-control(type='text', name='', value=student.name)
+                  .form-group
+                    label.sr-only(for='form-password') Username
+                    input#form-password.form-password.form-control(type='text', name='', value=student.username)
+                  .form-group
+                    label.sr-only(for='form-password') Password
+                    input#form-password.form-password.form-control(type='password', name='password', placeholder='Password...')
+                  button.btn(type='submit') Edit
+            .col-sm-3
+              a.btn.btn-info(href='../admin/logout', role='button') Logout!
+    // Javascript
+    script(src='/stylesheets/assets/js/jquery-1.11.1.min.js')
+    script(src='/stylesheets/assets/bootstrap/js/bootstrap.min.js')
+    script(src='/stylesheets/assets/js/jquery.backstretch.min.js')
+    script(src='/stylesheets/assets/js/scripts.js')
+    //if lt IE 10
+      script(src='assets/js/placeholder.js')
