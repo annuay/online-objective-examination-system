@@ -24,7 +24,10 @@ Student users can take the exams of the courses they are registered in. Once an 
 
 6. Using a browser, go to http://localhost:3000 and you'll see the application running!
 
+## Setting Up Default Admin User
 
+Create an admin user in database to log in. Set up MongoDB on port 27017. Create a new DB called examdb. Create a new collection called admin. Add the following entry (directly to DB): 
+{username: DESIRED_ADMIN_USERNAME, password: DESIRED_ADMIN_PASSWORD}.
 
 ## Contributing
 
