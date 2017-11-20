@@ -5,6 +5,10 @@ html(lang='en')
   script(type='text/javascript')| var exam_code =!{JSON.stringify(exam_code)};
   script(src='/javascripts/question_list.js')
   head
+    script.
+      window.location.hash="no-back-button";
+      window.location.hash="Again-No-back-button";
+      window.onhashchange=function(){window.location.hash="no-back-button";}
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
